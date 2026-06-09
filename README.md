@@ -60,11 +60,22 @@ php artisan key:generate
    DB_PASSWORD=
    ```
 
-### 5. Migrasi dan Seeding Database
+### 5. Membangun Struktur Database
+Terdapat dua cara untuk membangun struktur tabel database, yaitu menggunakan **Migrations** atau menggunakan file **.sql**.
+
+**Opsi A: Menggunakan Migrations (Direkomendasikan)**
 Jalankan perintah ini untuk membangun struktur tabel secara otomatis dan memasukkan data admin standar (dummy data):
 ```bash
 php artisan migrate --seed
 ```
+
+**Opsi B: Menggunakan file `.sql`**
+Jika Anda sudah memiliki file `.sql` (contoh: `db_ramururu.sql`), Anda bisa mengimpor file tersebut langsung ke phpMyAdmin:
+1. Buka `http://localhost/phpmyadmin` di browser.
+2. Klik nama database yang telah Anda buat pada langkah ke-4.
+3. Klik menu **Import** pada bagian atas layar.
+4. Klik tombol **Choose File** lalu pilih file `.sql` Anda (contoh: `db_ramururu.sql`).
+5. Scroll ke bawah lalu klik tombol **Import** atau **Go** untuk mengeksekusi file tersebut.
 
 ### 6. Build Assets (Tampilan HTML/CSS/JS)
 Agar tampilan website terlihat sempurna, *compile* aset desainnya menggunakan perintah:

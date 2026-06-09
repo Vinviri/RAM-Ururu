@@ -18,6 +18,7 @@ return new class extends Migration
             $table->enum('jenis_transaksi', ['Masuk', 'Keluar']);
             $table->integer('jumlah_barang');
             $table->date('tgl_transaksi');
+            $table->text('keterangan')->nullable();
             $table->timestamps();
 
             $table->foreign('id_barang')->references('id_barang')->on('barang')->onDelete('cascade');
