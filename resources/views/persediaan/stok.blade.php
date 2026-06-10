@@ -292,7 +292,7 @@
                 
                 const statusBadge = document.getElementById('panel-status');
                 statusBadge.textContent = data.barang.status_barang;
-                statusBadge.className = 'status-badge ' + (data.barang.status_barang === 'Tersedia' ? 'status-available' : 'status-unavailable');
+                statusBadge.className = 'status-badge ' + (data.barang.status_barang === 'Tersedia' ? 'status-available' : (data.barang.status_barang === 'Warning' ? 'status-warning' : 'status-unavailable'));
                 
                 document.getElementById('panel-stok').textContent = new Intl.NumberFormat('id-ID').format(data.barang.stok_saat_ini);
                 

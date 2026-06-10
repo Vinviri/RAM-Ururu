@@ -22,7 +22,6 @@ class BarangController extends Controller
             'kode_barang' => 'required|string|max:20|unique:barang,kode_barang',
             'nama_barang' => 'required|string|max:150',
             'stok_saat_ini' => 'required|integer|min:0',
-            'status_barang' => 'required|in:Tersedia,Tidak Tersedia',
         ], [
             'id_kategori.required' => 'Kategori wajib dipilih.',
             'id_kategori.exists' => 'Kategori tidak valid.',
@@ -35,11 +34,7 @@ class BarangController extends Controller
             'status_barang.required' => 'Status wajib dipilih.',
         ]);
 
-        $data = $request->only(['id_kategori', 'kode_barang', 'nama_barang', 'stok_saat_ini', 'status_barang']);
-        
-        if ($data['status_barang'] === 'Tidak Tersedia') {
-            $data['stok_saat_ini'] = 0;
-        }
+        $data = $request->only(['id_kategori', 'kode_barang', 'nama_barang', 'stok_saat_ini']);
 
         Barang::create($data);
 
@@ -59,16 +54,11 @@ class BarangController extends Controller
             'kode_barang' => 'required|string|max:20|unique:barang,kode_barang,' . $barang->id_barang . ',id_barang',
             'nama_barang' => 'required|string|max:150',
             'stok_saat_ini' => 'required|integer|min:0',
-            'status_barang' => 'required|in:Tersedia,Tidak Tersedia',
         ], [
             'kode_barang.unique' => 'Kode barang sudah digunakan.',
         ]);
 
-        $data = $request->only(['id_kategori', 'kode_barang', 'nama_barang', 'stok_saat_ini', 'status_barang']);
-        
-        if ($data['status_barang'] === 'Tidak Tersedia') {
-            $data['stok_saat_ini'] = 0;
-        }
+        $data = $request->only(['id_kategori', 'kode_barang', 'nama_barang', 'stok_saat_ini']);
 
         $barang->update($data);
 

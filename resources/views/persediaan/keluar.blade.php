@@ -18,7 +18,7 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('persediaan.keluar.store') }}">
+        <form method="POST" action="{{ route('persediaan.keluar.store') }}" style="padding: 1.5rem;">
             @csrf
             
             <div class="form-group" style="margin-bottom: 1.5rem;">

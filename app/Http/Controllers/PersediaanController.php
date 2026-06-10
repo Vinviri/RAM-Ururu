@@ -88,11 +88,7 @@ class PersediaanController extends Controller
             // Update Stok Barang
             $barang->stok_saat_ini += $request->jumlah_barang;
             
-            // Otomatis ubah status menjadi Tersedia jika sebelumnya Tidak Tersedia
-            if ($barang->stok_saat_ini > 0) {
-                $barang->status_barang = 'Tersedia';
-            }
-            
+
             $barang->save();
 
             DB::commit();
@@ -154,11 +150,6 @@ class PersediaanController extends Controller
             // Update Stok Barang
             $barang->stok_saat_ini -= $request->jumlah_barang;
             
-            // Otomatis ubah status menjadi Tidak Tersedia jika stok habis
-            if ($barang->stok_saat_ini == 0) {
-                $barang->status_barang = 'Tidak Tersedia';
-            }
-
             $barang->save();
 
             DB::commit();

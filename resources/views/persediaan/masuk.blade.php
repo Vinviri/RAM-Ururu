@@ -10,7 +10,7 @@
         <h2 class="page-card-title">Catat Barang Masuk</h2>
     </div>
     <div class="page-card-body">
-        <form method="POST" action="{{ route('persediaan.masuk.store') }}">
+        <form method="POST" action="{{ route('persediaan.masuk.store') }}" style="padding: 1.5rem;">
             @csrf
             
             <div class="form-group" style="margin-bottom: 1.5rem;">

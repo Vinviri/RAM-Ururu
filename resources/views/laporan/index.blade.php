@@ -35,7 +35,7 @@
                 <div class="filter-actions">
                     <button type="submit" class="btn btn-primary" style="height: 100%;">Terapkan Filter</button>
                     <a href="{{ route('laporan.index') }}" class="btn btn-secondary" style="height: 100%;">Reset</a>
-                {{-- <a href="{{ route('laporan.export-pdf', request()->all()) }}" class="btn btn-success"
+                    <a href="{{ route('laporan.export-pdf', request()->all()) }}" class="btn btn-success"
                         style="height: 100%; display: flex; align-items: center; gap: 0.5rem;" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -46,7 +46,7 @@
                             <polyline points="10 9 9 9 8 9"></polyline>
                         </svg>
                         Export PDF
-                    </a> --}}
+                    </a>
                 </div>
             </form>
         </div>

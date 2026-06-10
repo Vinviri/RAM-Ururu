@@ -32,4 +32,17 @@ class Barang extends Model
     {
         return $this->hasMany(Transaksi::class, 'id_barang', 'id_barang');
     }
+
+    protected static function booted()
+    {
+        static::saving(function ($barang) {
+            if ($barang->stok_saat_ini < 5) {
+                $barang->status_barang = 'Tidak Tersedia';
+            } elseif ($barang->stok_saat_ini == 5) {
+                $barang->status_barang = 'Warning';
+            } else {
+                $barang->status_barang = 'Tersedia';
+            }
+        });
+    }
 }

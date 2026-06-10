@@ -41,7 +41,7 @@
                             </span>
                         </td>
                         <td>
-                            <span class="status-badge {{ $barang->status_barang === 'Tersedia' ? 'status-available' : 'status-unavailable' }}">
+                            <span class="status-badge {{ $barang->status_barang === 'Tersedia' ? 'status-available' : ($barang->status_barang === 'Warning' ? 'status-warning' : 'status-unavailable') }}">
                                 {{ $barang->status_barang }}
                             </span>
                         </td>

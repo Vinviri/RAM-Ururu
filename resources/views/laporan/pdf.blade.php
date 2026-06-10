@@ -3,7 +3,6 @@ Template ini digunakan untuk generate PDF laporan.
 Anda bisa mengaktifkannya nanti jika sudah menginstall dompdf
 --}}
 
-{{--
 <!DOCTYPE html>
 <html>
 
@@ -71,4 +70,3 @@ Anda bisa mengaktifkannya nanti jika sudah menginstall dompdf
 </body>
 
 </html>
---}}

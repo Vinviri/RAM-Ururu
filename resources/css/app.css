@@ -1206,6 +1206,7 @@ table {
 }
 
 .status-available { color: var(--green-700); background: var(--green-50); }
+.status-warning { color: var(--amber-700); background: var(--amber-50); }
 .status-unavailable { color: var(--red-600); background: var(--red-50); }
 
 .type-badge {

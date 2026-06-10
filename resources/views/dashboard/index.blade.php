@@ -128,7 +128,7 @@
                                     <span class="stock-badge stock-low">{{ $item->stok_saat_ini }}</span>
                                 </td>
                                 <td>
-                                    <span class="status-badge {{ $item->status_barang === 'Tersedia' ? 'status-available' : 'status-unavailable' }}">
+                                    <span class="status-badge {{ $item->status_barang === 'Tersedia' ? 'status-available' : ($item->status_barang === 'Warning' ? 'status-warning' : 'status-unavailable') }}">
                                         {{ $item->status_barang }}
                                     </span>
                                 </td>
@@ -190,7 +190,7 @@
                                     <span class="stock-badge stock-high">{{ number_format($item->stok_saat_ini) }}</span>
                                 </td>
                                 <td>
-                                    <span class="status-badge {{ $item->status_barang === 'Tersedia' ? 'status-available' : 'status-unavailable' }}">
+                                    <span class="status-badge {{ $item->status_barang === 'Tersedia' ? 'status-available' : ($item->status_barang === 'Warning' ? 'status-warning' : 'status-unavailable') }}">
                                         {{ $item->status_barang }}
                                     </span>
                                 </td>
