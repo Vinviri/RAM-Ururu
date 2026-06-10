@@ -20,10 +20,10 @@ class UserSeeder extends Seeder
             DB::table('users')->insert([
                 'nama_admin' => 'Admin',
                 'email' => 'admin@ramururu.com',
-                'password' => Hash::make('password'),
+                'password' => Hash::make('admin123'),
             ]);
 
-            $this->command->info('Admin user created: admin@ramururu.com / password');
+            $this->command->info('Admin user created: admin@ramururu.com / admin123');
         } else {
             $this->command->info('Admin user already exists, skipping...');
         }
