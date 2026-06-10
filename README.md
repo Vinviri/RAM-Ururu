@@ -99,3 +99,21 @@ Aplikasi sekarang dapat diakses melalui browser di alamat:
 Gunakan akun ini untuk masuk ke dalam aplikasi pertama kali:
 - **Email:** `admin@ramururu.com`
 - **Password:** `admin123`
+
+---
+
+## 🛠️ Modifikasi & Kustomisasi
+
+### 1. Fitur Export PDF Laporan
+Fitur export PDF pada menu laporan telah ditambahkan namun saat ini berada dalam status **dinonaktifkan (komentar)**. Jika Anda ingin mengaktifkannya:
+1. Buka terminal dan jalankan instalasi library PDF: `composer require barryvdh/laravel-dompdf`
+2. Hapus tanda komentar pada `routes/web.php` untuk rute `/laporan/export-pdf`.
+3. Hapus tanda komentar pada fungsi `exportPdf()` di `app/Http/Controllers/LaporanController.php`.
+4. Hapus tanda komentar pada tombol HTML "Export PDF" di `resources/views/laporan/index.blade.php`.
+5. Hapus tanda komentar untuk format template PDF di dalam `resources/views/laporan/pdf.blade.php`.
+
+### 2. Mengganti Teks Tampilan Web
+Tampilan web dibangun menggunakan Laravel Blade. Semua teks dan struktur HTML yang muncul di halaman dapat diubah dengan mengedit file-file berakhiran `.blade.php` di dalam folder `resources/views/`.
+- **Halaman Laporan:** `resources/views/laporan/index.blade.php`
+- **Halaman Dashboard:** `resources/views/dashboard/`
+- **Menu/Navigasi/Layout:** `resources/views/layouts/`

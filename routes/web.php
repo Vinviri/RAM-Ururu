@@ -52,6 +52,7 @@ Route::middleware('auth')->group(function () {
 
     // Laporan
     Route::get('/laporan', [App\Http\Controllers\LaporanController::class, 'index'])->name('laporan.index');
+    // Route::get('/laporan/export-pdf', [App\Http\Controllers\LaporanController::class, 'exportPdf'])->name('laporan.export-pdf');
 
     // API Internal
     Route::get('/api/barang-detail/{barang}', [App\Http\Controllers\PersediaanController::class, 'getDetailBarang']);
